@@ -1,0 +1,52 @@
+.mypost-container{
+    margin-top: 5.2rem;
+}
+
+.mypost-container .post{
+    display: flex;
+    width: 75%;
+    margin: 2rem 2rem;
+    padding: 2rem;
+    box-shadow:inset -12px -12px 10px var(--shadow-5),inset 12px 12px 10px var(--shadow-5);
+}
+
+.mypost-container .post img{
+    width: 40%;
+    height: 330px;
+    vertical-align: middle;
+}
+
+.mypost-container .post-body{
+   padding: 1rem;
+   margin-left: 2rem;
+}
+
+.mypost-container p{
+    font-size: 1.5rem;
+}
+
+.deleteModal{
+    background-color: var(--primary-color);
+    width: 600px;
+    height: 100px;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 100;
+    transition: all 0.5s ease-out;
+    color: #00F2B8;
+}
+
+.modalClosed{
+    opacity: 1;
+    transform: translateY(-400px);
+}
+
+.modalOpen{
+    opacity: 1;
+    transform: translateY(0);
+}
+

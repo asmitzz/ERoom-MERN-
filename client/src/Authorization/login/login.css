@@ -1,0 +1,116 @@
+.login-container{
+        background:var(--primary-color);
+        padding: 1.7% 0;
+}
+
+.loginSection{
+    background: var(--secondary-color);
+    width: 45%;
+    margin: auto;
+    padding: 3rem 1rem;
+    border-radius: 15px;
+    border: none;
+    box-shadow: -5px -4px 5px var(--shadow-1),6px 6px 3px var(--shadow-2);
+}
+
+.login-label{
+    color: var(--primary-color);
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+
+.formSection{
+    margin: auto;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+}
+
+.loginSection .form-control{
+    box-shadow: inset -5px -5px 13px var(--shadow-2);
+    height: 3rem;
+    background: var(--primary-color);
+    border-radius: 20px;
+    padding-left: 1.2rem;
+}
+
+.loginBtn{
+    background:var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 800;
+    border-radius: 20px;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    border: none;
+    width: 30%;
+    outline: none;
+    box-shadow: -3px -3px 5px var(--shadow-1) ,3px 3px 5px var(--shadow-2);
+}
+
+.loginBtn:hover{
+    box-shadow: -3px -3px 5px var(--shadow-2),
+    3px 3px 5px var(--shadow-1);
+    outline: none;
+}
+
+.link{
+    color: var(--primary-color);
+}
+
+.link:hover{
+    color: var(--primary-color);
+    text-decoration: double underline;
+}
+
+.orSeperator{
+   display: flex;
+   align-items: center;
+   color: var(--primary-color);
+   justify-content: center;
+}
+
+.orSeperator hr{
+   border: none;
+   width: 40%;
+   border-top: 2px solid var(--primary-color);
+}
+
+.fbBtn{
+    background-color: rgb(66, 133, 244);
+    color: var(--primary-color);
+    height: 50px;
+    width: 240px;
+    border: none;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
+    font-size: 16px;
+    line-height: 48px;
+    border-radius: 1px;
+    transition: background-color 0.218s ease 0s, border-color 0.218s ease 0s, box-shadow 0.218s ease 0s;
+    font-family: Roboto, arial, sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fbBtn:hover{
+    box-shadow: rgb(66, 133, 244) 0px 2px 4px 0px;
+    transition: background-color 0.218s ease 0s, border-color 0.218s ease 0s, box-shadow 0.218s ease 0s;
+}
+
+@media(max-width:1024px) and (min-width:700px){
+  .loginSection{
+     width: 60%;
+}
+}
+
+@media(max-width:700px) and (min-width:550px){
+    .loginSection{
+       width: 80%;
+  }
+  }
+
+@media(max-width:550px) and (min-width:360px){
+    .loginSection{
+       width: 90%;
+}
+}

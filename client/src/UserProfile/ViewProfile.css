@@ -1,0 +1,9 @@
+.viewprofile-button{
+    margin-top: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-right: 4rem;
+    color: var(--font-color-1);
+    background: var(--font-color-4);
+}

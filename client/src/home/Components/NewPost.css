@@ -1,0 +1,64 @@
+.newpost-container{
+    padding: 4rem 4rem;
+    background: var(--primary-color);
+}
+
+
+.newpost-container .form-control{
+    width: 70%;
+}
+
+.submitBtn{
+    font-weight: 700;
+    border: 2px solid var(--font-color-4);
+    margin-top: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.6rem 1.5rem;
+    color: var(--font-color-1);
+    background: var(--font-color-4);
+    box-shadow:  3px 3px 5px  var(--shadow-3);
+}
+
+.submitBtn:hover{
+    box-shadow:  -3px -3px 5px  var(--shadow-3);
+    text-decoration: none;
+    color: var(--font-color-1);
+}
+
+
+.newpost-label{
+    color: var(--font-color-4);
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.form-control{
+    box-shadow: 2px 2px var(--shadow-5) inset,-2px -2px var(--shadow-5) inset;
+}
+
+.uploadPost{
+    background-color:var(--primary-color);
+    width: 600px;
+    height: 100px;
+    position: absolute;
+    top: 150vh;
+    left: 30%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 100;
+    transition: all 0.5s ease-out;
+    color: #00F2B8;
+}
+
+
+.uploadClosed{
+    display: none;
+}
+
+.uploadOpen{
+    opacity: 1;
+    display: block;
+    transform: translateY(0);
+}

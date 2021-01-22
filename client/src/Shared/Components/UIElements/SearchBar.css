@@ -1,0 +1,26 @@
+.example{
+  margin-right: 8rem;
+}
+
+.example input{
+  height: 2.5rem;
+  border-radius: 15px;
+  border: none;
+  padding: 0.5rem;
+}
+
+.example input:focus{
+    outline: none;
+}
+
+.example button{
+  padding: 0.5rem 0.8rem;  
+  cursor: pointer;
+  color: var(--secondary-color);
+  border-radius: 15px;
+  border: 1px solid var(--secondary-color); 
+}
+
+.example button:focus{
+    outline: none;
+}

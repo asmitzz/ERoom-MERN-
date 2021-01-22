@@ -1,0 +1,50 @@
+.filter-container{
+    position: fixed;
+    top:40px;
+    left:0;
+    height: 100vh;
+    width: 22%;
+    color:var(--tertiary-color);
+    padding-top: 1.8rem;
+    background: var(--font-color-4);
+    border-left: 1.5rem solid var(--font-color-4);
+    box-shadow:inset -12px -12px 8px var(--shadow-2);
+}
+
+.filterDiv{
+    border-top-left-radius:200px ;
+    padding: 1.5rem;
+    padding-top: 4rem;
+    background:var(--primary-color);
+    height: 100Vh;
+    box-shadow:inset -5px -5px 8px var(--shadow-2), 5px 5px 8px var(--shadow-1);
+}
+
+.filterDiv h2{
+    color: var(--tertiary-color);
+    font-weight: 700;
+}
+
+.filterDiv i{
+    color: var(--tertiary-color);
+}
+
+.filterDiv button{
+    color: var(--font-color-1);
+    background: var(--font-color-4);
+    box-shadow:  3px 3px 5px  var(--shadow-3);
+    border-radius: 20px;
+    display: block;
+}
+
+.filterDiv button:hover{
+    box-shadow:  -3px -3px 5px  var(--shadow-3);
+}
+
+.filterDiv label{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+

@@ -1,0 +1,79 @@
+.contact-container{
+    background:var(--primary-color);
+    padding-top: 5rem;
+    color: var(--font-color-4);
+}
+
+
+.contact-container .form-control{
+    width: 60%;
+}
+
+.main-section{
+    padding: 4rem;
+}
+
+.contactUs h2{
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+hr{
+    border: 2px solid var(--primary-color);
+}
+
+.contact-label{
+    font-weight: 700;
+    padding-top: 1rem;
+}
+
+textarea{
+    height: 7rem;
+}
+
+.send{
+    font-weight: 700;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem ;
+    cursor: pointer;
+    color: var(--font-color-1);
+    background: var(--font-color-4);
+    box-shadow:  3px 3px 5px  var(--shadow-3);
+    border: none;
+}
+
+.send:hover{
+    box-shadow:  -3px -3px 5px  var(--shadow-3);
+    text-decoration: none;
+    color: var(--font-color-1);
+}
+
+.feedModal{
+    background-color: var(--primary-color);
+    width: 600px;
+    position: absolute;
+    top: 130%;
+    left: 30%;
+    padding:1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 100;
+    transition: all 0.5s ease-out;
+    color: #00F2B8;
+}
+
+.feedClosed{
+    opacity: 1;
+    transform: translateY(-1000px);
+}
+
+.feedOpen{
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+@media(max-width:550px) and (min-width:360px){
+    .main-section{
+        padding: 1rem;
+    }
+}
