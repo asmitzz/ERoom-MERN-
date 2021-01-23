@@ -30,7 +30,7 @@ class Posts extends Component {
               return (
                 <div key={this.state.posts[posts]._id}>
                   <div className="posts-container d-md-flex">
-                    <div id={this.state.posts[posts].Id} className="carousel slide col-md-6" data-ride="carousel">
+                    <div id={this.state.posts[posts]._id} className="carousel slide col-md-6" data-ride="carousel">
                       <div className="carousel-inner">
                         <div className="carousel-item active">
                           <img className="d-block img-fluid" src={this.state.posts[posts].image1} alt="First Slide" />
@@ -45,10 +45,10 @@ class Posts extends Component {
                           <img className="d-block img-fluid" src={this.state.posts[posts].image4} alt="Four Slide"/>
                         </div>
                       </div>
-                      <a href={"#" + this.state.posts[posts].Id} className="carousel-control-prev" data-slide="prev">
+                      <a href={"#" + this.state.posts[posts]._id} className="carousel-control-prev" data-slide="prev">
                         <span className="carousel-control-prev-icon font-color-2"></span>
                       </a>
-                      <a href={"#" + this.state.posts[posts].Id} className="carousel-control-next" data-slide="next">
+                      <a href={"#" + this.state.posts[posts]._id} className="carousel-control-next" data-slide="next">
                         <span className="carousel-control-next-icon"></span>
                       </a>
                     </div>
@@ -74,7 +74,7 @@ class Posts extends Component {
                         <strong>₹{this.state.posts[posts].rent}</strong>
                         <span className="font-color-2"> /month</span>
                       </p>
-                      <Link to={"/fullpost?post=" + posts} className="viewBtn mb-2">
+                      <Link to={"/fullpost?post=" + this.state.posts[posts]._id} className="viewBtn mb-2">
                       <i className="fa fa-eye"></i> View Details
                       </Link>
                     </div>

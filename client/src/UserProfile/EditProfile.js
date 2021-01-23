@@ -14,7 +14,7 @@ const EditProfile = (props) => {
     const [uid,setUid] = useState(props.uid);
 
     const picHandler= (e) => {
-        const uploadpic = new FileReader();
+         const uploadpic = new FileReader();
          uploadpic.readAsDataURL(e.target.files[0]);
          uploadpic.onloadend = () => {
           setPic(uploadpic.result)

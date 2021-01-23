@@ -14,17 +14,15 @@ import Myposts from './home/Components/mypost';
 import Nav from './Shared/Components/navigation/navigation';
 import EditProfile from './UserProfile/EditProfile';
 import ViewProfile from './UserProfile/ViewProfile';
-import axios from "axios";
 import EditMyPosts from './home/Components/EditMyPosts';
 class App extends Component{
 
    state={
      user:"",
-     uid:"",
-     posts: []
+     uid:""
    }
 
-   componentDidMount = async() => {
+   componentDidMount = () => {
        fire.auth().onAuthStateChanged( user => {
            if(user){
              this.setState({ user : user, uid: user.providerData[0].uid});
@@ -33,13 +31,6 @@ class App extends Component{
              this.setState({ user : null })
            }
        });
-
-       await axios.get("http://localhost:8000/api/get/posts").then((res) => {
-        this.setState({
-          posts: res.data
-        });
-      });
-
    }
 
   render(){
@@ -49,7 +40,7 @@ class App extends Component{
          <main>
          <Switch>
              <Route exact path="/">
-                <Home postdb = {this.state.posts}/>
+                <Home />
              </Route>
              <Route exact path="/about">
                 <About/>
@@ -64,7 +55,7 @@ class App extends Component{
                 <NewPost uid={this.state.uid}/>
              </Route>
              <Route exact path="/fullpost">
-                <FullPost postdb = {this.state.posts}/>
+                <FullPost />
              </Route>
              <Route exact path="/myposts">
                  <Myposts uid={this.state.uid}/>

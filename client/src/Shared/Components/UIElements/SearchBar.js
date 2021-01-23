@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState,useEffect } from 'react';
 
 import axios from 'axios';
 import './SearchBar.css';
@@ -8,8 +8,11 @@ const SearchBar = (props) => {
      const [search, setSearch] = useState(null);
      const [hostel, setHostel] = useState("");
 
+     useEffect(() => {
+        axios.get('http://localhost:8000/api/get/posts/name').then( res => (setSearch(res.data)) );
+     },[]);
+
      const inputHandler = (e) => {
-        axios.get('http://localhost:8000/api/get/posts').then( res => (setSearch(res.data)) );
         setHostel(e.target.value);
      };
 
@@ -23,7 +26,7 @@ const SearchBar = (props) => {
           <input type="list" list="search" onChange={inputHandler} placeholder="Search hostel..." name="search"/>
           <datalist id="search">
              { search && search.map( hostel => (
-               <option key={hostel.Id}>{hostel.name}</option>
+               <option key={hostel._id}>{hostel.name}</option>
              ) ) }
           </datalist>
           <button type="submit"><i className="fa fa-search"></i></button>

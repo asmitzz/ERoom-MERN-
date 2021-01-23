@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import fire from '../auth';
 import logo from '../../assets/logos/register.svg';
 import {Link} from 'react-router-dom';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import GoogleBtn from 'react-google-button';
 import FacebookBtn from 'react-facebook-login';
 
@@ -71,7 +71,7 @@ class Signup extends Component{
                       <br/>
                        <span className="primary-color">Already have an account? </span>  <Link className="link" to="/">LOGIN</Link>
                      </div>
-                     <p className="orSeperator"><hr/>&nbsp;OR&nbsp;<hr/></p>
+                     <div className="orSeperator"><hr/>&nbsp;OR&nbsp;<hr/></div>
                      <GoogleBtn className="d-inline-block mr-3 ml-5" onClick={this.signInWithGoogle}/>
                      <FacebookBtn icon="fa-facebook pr-3" onClick={this.signInwithFacebook} cssClass="fbBtn"/>
                   </div>

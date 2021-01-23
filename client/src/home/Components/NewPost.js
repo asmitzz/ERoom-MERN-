@@ -18,11 +18,17 @@ class NewPost extends Component{
        image2:"",
        image3:"",
        image4:"",
-       uid:this.props.uid,
+       uid:"",
        isphonetrue:"",
        ispintrue:"",
        show:false
     };
+
+    static getDerivedStateFromProps(props,state) {
+          return(
+            state.uid = props.uid
+          )
+    }
 
     nameHandler = (e) => {
         this.setState({name:e.target.value})

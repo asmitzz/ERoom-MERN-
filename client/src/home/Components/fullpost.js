@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import axios from "axios";
 
 import './fullpost.css';
 import Spinner from '../../Shared/Components/UIElements/spinner';
@@ -6,30 +7,38 @@ import Spinner from '../../Shared/Components/UIElements/spinner';
 class FullPost extends Component{
 
     state = {
-        posts:this.props.postdb,
-    }
+        posts:null,
+    };
 
+    componentDidMount = async() => {
+        const url = new URLSearchParams(window.location.search);
+
+        await axios.get("http://localhost:8000/api/get/post/"+url.get('post')).then((res) => {
+          this.setState({
+            posts: res.data
+          });
+        });
+      };
     
     render(){
-        const url = new URLSearchParams(window.location.search);
         return(
 
             <div className="fullpost-container pb-3">
                        {  this.state.posts ? 
                            (<div className="mt-4">  
-                             <div id="slider" className="carousel slide " data-ride="carousel" key={this.state.posts[url.get('post')].Id}>
+                             <div id="slider" className="carousel slide " data-ride="carousel">
                                  <div className="carousel-inner">
                                      <div className="carousel-item active">
-                                         <img className="fullpost-img" src={this.state.posts[url.get('post')].image1} alt="room"/>    
+                                         <img className="fullpost-img" src={this.state.posts[0].image1} alt="room"/>    
                                      </div>
                                      <div className="carousel-item">
-                                         <img className="fullpost-img" src={this.state.posts[url.get('post')].image2} alt="room"/>    
+                                         <img className="fullpost-img" src={this.state.posts[0].image2} alt="room"/>    
                                      </div>
                                      <div className="carousel-item">
-                                         <img className="fullpost-img" src={this.state.posts[url.get('post')].image3} alt="room"/>    
+                                         <img className="fullpost-img" src={this.state.posts[0].image3} alt="room"/>    
                                      </div>
                                      <div className="carousel-item">
-                                         <img className="fullpost-img" src={this.state.posts[url.get('post')].image4} alt="room"/>    
+                                         <img className="fullpost-img" src={this.state.posts[0].image4} alt="room"/>    
                                      </div>                                     
                                  </div>
                                  <a href="#slider" className="carousel-control-prev" data-slide="prev"><span className="carousel-control-prev-icon"></span></a>
@@ -47,10 +56,10 @@ class FullPost extends Component{
                                      <p>Description: </p>
                                 </div>
                                 <div className="col-9">
-                                     <p>{this.state.posts[url.get('post')].name}</p>
-                                     <p>₹{this.state.posts[url.get('post')].rent}</p>
-                                     <p>{this.state.posts[url.get('post')].lookingfor}</p>
-                                     <p>{this.state.posts[url.get('post')].description}</p>
+                                     <p>{this.state.posts[0].name}</p>
+                                     <p>₹{this.state.posts[0].rent}</p>
+                                     <p>{this.state.posts[0].lookingfor}</p>
+                                     <p>{this.state.posts[0].description}</p>
                                 </div>
                                </div> 
                              </div>
@@ -65,10 +74,10 @@ class FullPost extends Component{
                                      <p>Phone: </p>
                                 </div>
                                 <div className="col-9">
-                                     <p>{this.state.posts[url.get('post')].address}</p>
-                                     <p>{this.state.posts[url.get('post')].area}</p>
-                                     <p>{this.state.posts[url.get('post')].pincode}</p>
-                                     <p>{this.state.posts[url.get('post')].phone}</p>
+                                     <p>{this.state.posts[0].address}</p>
+                                     <p>{this.state.posts[0].area}</p>
+                                     <p>{this.state.posts[0].pincode}</p>
+                                     <p>{this.state.posts[0].phone}</p>
                                 </div>
                                </div> 
                              </div>

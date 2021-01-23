@@ -16,6 +16,10 @@ class Contact extends Component{
     show:false
   };
 
+  componentDidMount = () => {
+    window.scroll(0,0);
+  }
+
   nameHandler = (e) => {
       this.setState( {name:e.target.value} )
   };

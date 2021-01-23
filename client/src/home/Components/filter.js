@@ -1,9 +1,19 @@
 import React, { Component } from "react";
 import "./filter.css";
+import axios from "axios";
+
 import { withRouter } from "react-router-dom";
 class Filter extends Component {
+  componentDidMount = async() => {
+    await axios.get("http://localhost:8000/api/get/posts").then((res) => {
+      this.setState({
+        posts: res.data,
+      });
+    });
+  };
+
   state = {
-    posts: this.props.postdb,
+    posts: [],
     location:"",
     pincode:""
   };

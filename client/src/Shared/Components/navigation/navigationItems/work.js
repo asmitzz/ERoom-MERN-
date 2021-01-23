@@ -3,6 +3,11 @@ import React,{ Component } from 'react';
 import './work.css';
 
 class Work extends Component{
+
+  componentDidMount = () => {
+    window.scroll(0,0);
+  }
+
   render(){
     return(
         <div className="work-container"> 

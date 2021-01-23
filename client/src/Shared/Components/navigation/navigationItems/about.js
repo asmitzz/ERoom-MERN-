@@ -3,6 +3,9 @@ import React,{ Component } from 'react';
 import './about.css';
 
 class About extends Component{
+  componentDidMount = () => {
+    window.scroll(0,0);
+  }
   render(){
     return(
         <div className="about-container"> 

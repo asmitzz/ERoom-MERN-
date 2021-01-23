@@ -8,7 +8,7 @@ class Home extends Component{
     return(
         <div> 
            <p className="FilterNotMatch"><strong>No Posts Found!!</strong></p>
-           <Filter postdb = {this.props.postdb}/>
+           <Filter/>
            <Posts/>
         </div>
     );

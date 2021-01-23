@@ -8,16 +8,16 @@ class EditMyPost extends Component{
 
     componentDidMount = () =>{
        const url = new URLSearchParams(window.location.search);
-        axios.get('http://localhost:8000/api/get/posts').then( res => {
+        axios.get("http://localhost:8000/api/get/post/"+url.get('post')).then( res => {
             this.setState({
-                Id:res.data[url.get('post')].Id,
-                name:res.data[url.get('post')].name,
-                rent:res.data[url.get('post')].rent,
-                describe:res.data[url.get('post')].description,
-                address:res.data[url.get('post')].address,
-                area:res.data[url.get('post')].area,
-                pincode:res.data[url.get('post')].pincode,
-                phone:res.data[url.get('post')].phone
+                Id:res.data[0]._id,
+                name:res.data[0].name,
+                rent:res.data[0].rent,
+                describe:res.data[0].description,
+                address:res.data[0].address,
+                area:res.data[0].area,
+                pincode:res.data[0].pincode,
+                phone:res.data[0].phone
             })
         } );
     }
@@ -113,7 +113,9 @@ class EditMyPost extends Component{
             this.setState({ ispintrue:"please enter valid pincode" })
         }
         else if( this.state.phone.length === 10 ){
-            axios.post('http://localhost:8000/api/insert/posts',this.state);
+            const url = new URLSearchParams(window.location.search);
+            console.log('http://localhost:8000/api/update/post/'+url.get('post'));
+            axios.post('http://localhost:8000/api/update/post/'+url.get('post'),this.state);
             
             this.setState({show:true});
 
