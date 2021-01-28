@@ -72,7 +72,7 @@ class Signup extends Component{
                        <span className="primary-color">Already have an account? </span>  <Link className="link" to="/">LOGIN</Link>
                      </div>
                      <div className="orSeperator"><hr/>&nbsp;OR&nbsp;<hr/></div>
-                     <GoogleBtn className="d-inline-block mr-3 ml-5" onClick={this.signInWithGoogle}/>
+                     <GoogleBtn className="d-inline-block mr-3 ml-4" onClick={this.signInWithGoogle}/>
                      <FacebookBtn icon="fa-facebook pr-3" onClick={this.signInwithFacebook} cssClass="fbBtn"/>
                   </div>
              </div>

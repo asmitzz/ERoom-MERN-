@@ -1,9 +1,9 @@
 .profile-container{
     margin: auto;
     margin-top: 4.5rem;
+    margin-bottom: 1rem;
     width: 38%;
     background: white;
-    height: 58vh;
     color: white;
 }
 
@@ -25,14 +25,19 @@
     height: 100%;
     padding-left: 2rem ;
     padding-top: 8rem;
+    padding-bottom: 1rem;
     background: #101820FF;
 }
 
 .profile-container__content input{
-    margin-left: 1rem;
     margin-bottom: 1rem ;
-    padding-left: 0.5rem;
     border-radius: 10px;
+    margin-left: 0.4rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.profile-container__content input:focus{
+    outline: none;
 }
 
 input[type="text"][disabled]{background-color:white;}

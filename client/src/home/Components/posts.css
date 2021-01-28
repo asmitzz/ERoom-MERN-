@@ -10,16 +10,16 @@ body{
 
 .posts-container {
     width: 68%;
-    margin-bottom: 1rem;
     margin-left: 25%;
-    line-height: 23px;
+    line-height: 18px;
 }
 
 .posts-container img {
-    height: 250px;
-    width: 96%;
+    height: 230px;
+    width: 93%;
     margin:3rem 0;
-    box-shadow: 5px 10px 10px var(--shadow-4);
+    margin-left: 0.5rem;
+    box-shadow: 3px 5px 10px var(--shadow-4);
     border-radius: 10px;
 }
 

@@ -1,9 +1,10 @@
 import React,{ useState } from 'react';
 import fire from '../../../Authorization/auth';
 import './navigation.css';
-import {NavLink, withRouter} from 'react-router-dom';
+import {NavLink,Link, withRouter} from 'react-router-dom';
 import Backdrop from '../UIElements/backdrop';
 import Switch from './../UIElements/switch';
+import logo from '../../../assets/logos/profile.png'
 import SearchBar from '../UIElements/SearchBar';
 
 const Nav = (props) => {
@@ -26,6 +27,7 @@ const Nav = (props) => {
 	               <label htmlFor="check">
 		                <i className="fa fa-bars" id="btn" onClick={toggleHandler}></i> 
 	               </label>
+
              <div className="side" onClick={toggleHandler}>
 		             <header>MY MENU</header>
                  <NavLink to="/viewprofile"><i className="fa fa-user"></i> Profile</NavLink>
@@ -38,12 +40,17 @@ const Nav = (props) => {
               <div className="topnav">
                   <nav>
                      <ul>
+                       <li>
+                          <Link to="/" style={{border:'none'}}>
+                            <img src={logo} alt="logo" width="150" style={{marginRight:'16rem'}} />
+                          </Link>
+                       </li>
                         <li>
                            <SearchBar/>
                         </li>
-                        <li>
+                        {/* <li>
                         	<NavLink to="/" exact><i className="fa fa-home"></i> Home</NavLink>
-                        </li>
+                        </li> */}
                         <li>
                          	<NavLink to="/myposts"> <i className="fas fa-audio-description"> </i> My Posts</NavLink>
                         </li>

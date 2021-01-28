@@ -11,7 +11,7 @@ const ViewProfile = (props) => {
     const [users,setUsers] = useState("");
    
     useEffect(() => {
-        axios.get('http://localhost:8000/api/get/users').then( res => setUsers(res.data) )
+        axios.get('http://localhost:8000/api/get/users/'+uid).then( res => setUsers(res.data) )
     }, []);
 
     const submitHandler = (e) => {
