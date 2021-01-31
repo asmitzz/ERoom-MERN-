@@ -12,7 +12,7 @@ const ViewProfile = (props) => {
    
     useEffect(() => {
         axios.get('http://localhost:8000/api/get/users/'+uid).then( res => setUsers(res.data) )
-    }, []);
+    }, [users]);
 
     const submitHandler = (e) => {
        e.preventDefault();
