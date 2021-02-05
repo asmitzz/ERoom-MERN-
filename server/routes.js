@@ -55,7 +55,7 @@ router.post('/api/insert/posts',( req, res, next) => {
         image2 : req.body.image2,
         image3 : req.body.image3,
         image4 : req.body.image4,
-        uid:req.body.uid
+        uid : req.body.uid
     }).save();
 
 });
